@@ -31,11 +31,11 @@ if str(ROOT) not in sys.path:
 
 load_dotenv()
 
-from agent.planner        import GreenCareerPlanner   # noqa: E402
-from agent.executor       import GreenCareerExecutor  # noqa: E402
-from tools.knowledge_tool import KnowledgeBaseTool    # noqa: E402
-from src.green_jobs.db    import Database              # noqa: E402
-from src.green_jobs.auth  import Auth, AuthError       # noqa: E402
+from agent.planner        import GreenCareerPlanner
+from agent.executor       import GreenCareerExecutor
+from tools.knowledge_tool import KnowledgeBaseTool
+from src.green_jobs.db    import Database
+from src.green_jobs.auth  import Auth, AuthError
 
 # ── Logging ───────────────────────────────────────────────────────
 logging.basicConfig(
@@ -269,9 +269,9 @@ def show_login_page() -> None:
     st.markdown(f"""
     <div class="header-banner">
       <h1>🌱 Green Jobs Career Advisor</h1>
-      <p>Autonomous AI Agent — Powered by Groq LLaMA + DuckDuckGo + Skill India KB</p>
+      <p>Autonomous AI Agent — Powered by Gemini Free API + DuckDuckGo + Skill India KB</p>
       <span class="badge">₹0 Cost</span>
-      <span class="badge">Groq LLaMA 3.3</span>
+      <span class="badge">Gemini 2.5 Flash</span>
       <span class="badge">{ORG_NAME}</span>
     </div>
     """, unsafe_allow_html=True)
@@ -379,20 +379,20 @@ def show_history_page() -> None:
 
         # Build header line
         user_col = f"&nbsp;·&nbsp; 👤 <b>{run['username']}</b>" if is_admin else ""
-        badge = status_badge(run['status'])
         st.markdown(f"""
         <div class="history-row">
-        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
-            <b style="font-size:1rem;color:#1B5E20">#{run['id']} &nbsp; {run['user_name']}</b>
-            {user_col} &nbsp; {badge}
+              <b style="font-size:1rem;color:#1B5E20">#{run['id']} &nbsp; {run['user_name']}</b>
+              {user_col}
+              &nbsp; {status_badge(run['status'])}
             </div>
             <div style="font-size:0.8rem;color:#777">{started} &nbsp;·&nbsp; {elapsed}</div>
-        </div>
-        <div style="font-size:0.85rem;color:#444;margin-top:6px">
+          </div>
+          <div style="font-size:0.85rem;color:#444;margin-top:6px">
             🎯 <b>Goal:</b> {run['career_goal']}<br/>
             🏙️ {run['city']} &nbsp;·&nbsp; 🎓 {run['background'][:60]}{'…' if len(run['background']) > 60 else ''}
-        </div>
+          </div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -424,8 +424,8 @@ def show_history_page() -> None:
             if logs:
                 st.markdown("**Task log:**")
                 log_html = "".join(
-                    f'<div class="log-line">[{entry["level"]}] T{entry["task_id"]} {entry["message"]}</div>'
-                    for entry in logs
+                    f'<div class="log-line">[{l["level"]}] T{l["task_id"]} {l["message"]}</div>'
+                    for l in logs
                 )
                 st.markdown(
                     f'<div style="background:#1E272E;padding:10px;border-radius:8px">{log_html}</div>',
@@ -447,7 +447,7 @@ def show_main_app() -> None:
       <h1>🌱 Green Jobs Career Advisor</h1>
       <p>Autonomous AI Agent — Powered by Gemini Free API + DuckDuckGo + Skill India KB</p>
       <span class="badge">₹0 Cost</span>
-      <span class="badge">Groq LLaMA 3.3</span>
+      <span class="badge">Gemini 2.5 Flash</span>
       <span class="badge">9-Task Agent</span>
       <span class="badge">{ORG_NAME}</span>
     </div>
@@ -467,16 +467,16 @@ def show_main_app() -> None:
         st.markdown("## ⚙️ Configuration")
 
         # API Key
-        st.markdown("### 🔑 Groq API Key")
-        env_key = os.getenv("GROQ_API_KEY", "")
+        st.markdown("### 🔑 Gemini API Key")
+        env_key = os.getenv("GEMINI_API_KEY", "")
         if env_key:
             api_key = env_key
             st.success("✅ API Key loaded from .env")
         else:
             api_key = st.text_input(
-                "Paste your free GROQ API key",
+                "Paste your free Gemini API key",
                 type="password", placeholder="AIza...",
-                help="Get your FREE key at https://console.groq.com/keys",
+                help="Get your FREE key at https://aistudio.google.com/app/apikey",
             )
             if api_key:
                 st.success("✅ Key entered")
@@ -539,7 +539,7 @@ def show_main_app() -> None:
             for col, val, label in [
                 (c1, "9",   "Autonomous Tasks"),
                 (c1, "3",   "Live Web Searches"),
-                (c2, "3",   "Groq LLM Calls"),
+                (c2, "3",   "Gemini LLM Calls"),
                 (c2, "15",  "Green Roles in KB"),
                 (c3, "₹0",  "Total API Cost"),
                 (c3, "PDF", "Report Generated"),
@@ -587,7 +587,7 @@ def show_main_app() -> None:
             def log_ui(msg: str) -> None:
                 log_lines.append(msg)
                 lines_html = "".join(
-                    f'<div class="log-line">{line}</div>' for line in log_lines[-12:]
+                    f'<div class="log-line">{l}</div>' for l in log_lines[-12:]
                 )
                 log_box.markdown(
                     f'<div style="background:#1E272E;padding:10px;border-radius:8px">'
@@ -634,12 +634,10 @@ def show_main_app() -> None:
                     task.mark_running()
 
                     try:
-                        if task.tool == "search":
-                            executor._run_search(task)
-                        elif task.tool == "knowledge":
-                            executor._run_knowledge(task)
-                        elif task.tool == "llm":
-                            executor._run_llm(task)
+                        if   task.tool == "search":    executor._run_search(task)
+                        elif task.tool == "knowledge": executor._run_knowledge(task)
+                        elif task.tool == "llm":       executor._run_llm(task)
+                        elif task.tool == "report":
                             report_data = executor._compile_report_data(tasks)
                             executor.memory["report_data"] = report_data
                             executor._run_report(task)
@@ -844,7 +842,7 @@ def show_main_app() -> None:
     st.markdown(f"""
     <div class="footer">
       🌱 {PAGE_TITLE} &nbsp;|&nbsp;
-      Powered by Groq LLaMA 3.3 · DuckDuckGo · Skill India KB · fpdf2 &nbsp;|&nbsp;
+      Powered by Gemini 2.5 Flash · DuckDuckGo · Skill India KB · fpdf2 &nbsp;|&nbsp;
       Total Cost: ₹0 &nbsp;|&nbsp; {ORG_NAME}
     </div>
     """, unsafe_allow_html=True)
