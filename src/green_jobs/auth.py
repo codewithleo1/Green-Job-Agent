@@ -106,10 +106,14 @@ class Auth:
         Create the admin account on first run if it doesn't exist.
         Called once at app startup from .env values.
         """
+        import sqlite3
         admin_username = admin_username.strip().lower()
         if not self._db.user_exists(admin_username):
-            self.register(admin_username, admin_password, role="admin")
-            logger.info("Admin account '%s' created", admin_username)
+            try:
+                self.register(admin_username, admin_password, role="admin")
+                logger.info("Admin account '%s' created", admin_username)
+            except (AuthError, sqlite3.IntegrityError):
+                logger.info("Admin account '%s' already exists (race condition caught)", admin_username)
         else:
             logger.debug("Admin account '%s' already exists", admin_username)
 
