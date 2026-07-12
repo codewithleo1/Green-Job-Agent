@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# uv
+uv.lock
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Database (local only)
+*.db
+*.sqlite
+*.sqlite3
+
+# Reports (generated files)
+reports/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Other projects (not part of this repo)
+../Smart EV Charging & Grid Aligner/
+../green_jobs_agent V2/
+../green_jobs_agent/
+../lms/
+../ACSA/
+../Calender/
+../EADA/
+
+# Virtual environments anywhere
+**/green-env/
+**/.venv/
+**/venv/
+**/env/
+
+# Log files
+*.log

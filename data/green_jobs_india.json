@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "source": "Compiled from NITI Aayog, Ministry of New & Renewable Energy, ILO Green Jobs Report India 2023",
+    "last_updated": "2024",
+    "country": "India"
+  },
+  "green_job_sectors": [
+    {
+      "sector": "Solar Energy",
+      "growth_rate": "35% YoY",
+      "jobs_by_2030": "1 million+",
+      "top_roles": [
+        {
+          "title": "Solar PV Technician",
+          "salary_range_inr": "3,00,000 - 6,00,000",
+          "experience_level": "Entry to Mid",
+          "skills_required": ["PV system installation", "Electrical wiring", "Safety protocols", "AUTOCAD basics", "Grid connectivity"],
+          "certifications": ["MNRE Solar Technician Cert", "NITS Solar PV Installer", "IEI Electrical Engineering"],
+          "demand": "Very High"
+        },
+        {
+          "title": "Solar Energy Engineer",
+          "salary_range_inr": "6,00,000 - 15,00,000",
+          "experience_level": "Mid to Senior",
+          "skills_required": ["Solar system design", "PVSOL/PVSyst software", "Project management", "Grid integration", "Energy storage", "Python for energy modelling"],
+          "certifications": ["NABCEP PV Associate", "IEI Chartered Engineer", "PMP Certification"],
+          "demand": "High"
+        },
+        {
+          "title": "Solar Project Developer",
+          "salary_range_inr": "8,00,000 - 20,00,000",
+          "experience_level": "Senior",
+          "skills_required": ["Land acquisition", "Financial modelling", "EPC contracts", "Regulatory approvals", "DPR preparation", "MNRE guidelines"],
+          "certifications": ["MBA Energy Management", "CFA", "PMP"],
+          "demand": "High"
+        }
+      ]
+    },
+    {
+      "sector": "Electric Vehicles (EV)",
+      "growth_rate": "49% CAGR",
+      "jobs_by_2030": "5 million+",
+      "top_roles": [
+        {
+          "title": "EV Battery Engineer",
+          "salary_range_inr": "8,00,000 - 22,00,000",
+          "experience_level": "Mid to Senior",
+          "skills_required": ["Battery management systems (BMS)", "Electrochemistry", "Thermal management", "MATLAB/Simulink", "Cell testing", "Safety standards (UN 38.3)"],
+          "certifications": ["IIT EV Technology Cert", "SAE EV Safety", "ICAT Homologation"],
+          "demand": "Very High"
+        },
+        {
+          "title": "EV Charging Infrastructure Specialist",
+          "salary_range_inr": "5,00,000 - 12,00,000",
+          "experience_level": "Entry to Mid",
+          "skills_required": ["AC/DC charging protocols", "OCPP standard", "Smart grid", "Network management", "Electrical safety", "BIS standards"],
+          "certifications": ["BEE Energy Auditor", "CPRI EV Charger Testing", "ISO 15118"],
+          "demand": "Very High"
+        },
+        {
+          "title": "EV Software Engineer (Embedded)",
+          "salary_range_inr": "10,00,000 - 28,00,000",
+          "experience_level": "Mid to Senior",
+          "skills_required": ["C/C++ embedded", "CAN bus protocol", "AUTOSAR", "OTA updates", "Functional safety (ISO 26262)", "Python"],
+          "certifications": ["ISTQB Embedded", "AWS IoT", "MISRA C"],
+          "demand": "Very High"
+        },
+        {
+          "title": "EV Fleet Manager",
+          "salary_range_inr": "6,00,000 - 14,00,000",
+          "experience_level": "Mid",
+          "skills_required": ["Fleet telematics", "Route optimisation", "Total cost of ownership", "Sustainability reporting", "Vendor management"],
+          "certifications": ["CFA Transport", "CILT", "Six Sigma Green Belt"],
+          "demand": "High"
+        }
+      ]
+    },
+    {
+      "sector": "Sustainability & ESG",
+      "growth_rate": "28% YoY",
+      "jobs_by_2030": "500,000+",
+      "top_roles": [
+        {
+          "title": "ESG Analyst",
+          "salary_range_inr": "5,00,000 - 15,00,000",
+          "experience_level": "Entry to Mid",
+          "skills_required": ["GRI reporting standards", "BRSR reporting", "Carbon accounting", "Data analysis", "Excel/Power BI", "Stakeholder communication"],
+          "certifications": ["GRI Certified", "SASB FSA", "CFA ESG Certificate"],
+          "demand": "Very High"
+        },
+        {
+          "title": "Carbon Credit Analyst",
+          "salary_range_inr": "6,00,000 - 18,00,000",
+          "experience_level": "Mid",
+          "skills_required": ["Carbon markets", "Voluntary Carbon Standard", "Gold Standard", "Financial modelling", "GHG Protocol", "Python for data analysis"],
+          "certifications": ["VERRA VCS", "Gold Standard Certification", "CFA"],
+          "demand": "High"
+        },
+        {
+          "title": "Sustainability Manager",
+          "salary_range_inr": "10,00,000 - 25,00,000",
+          "experience_level": "Senior",
+          "skills_required": ["Corporate sustainability strategy", "Life cycle assessment", "Supply chain sustainability", "Regulatory compliance", "Board reporting", "Net Zero planning"],
+          "certifications": ["IEMA Sustainability", "ISO 14001 Lead Auditor", "GRI Certified"],
+          "demand": "High"
+        }
+      ]
+    },
+    {
+      "sector": "Green Building & Construction",
+      "growth_rate": "20% YoY",
+      "jobs_by_2030": "300,000+",
+      "top_roles": [
+        {
+          "title": "Green Building Consultant (LEED/IGBC)",
+          "salary_range_inr": "6,00,000 - 18,00,000",
+          "experience_level": "Mid to Senior",
+          "skills_required": ["LEED certification process", "IGBC guidelines", "Energy modelling", "Building simulation (eQUEST)", "HVAC optimisation", "Material specification"],
+          "certifications": ["LEED AP", "IGBC AP", "BEE Certified Energy Auditor"],
+          "demand": "High"
+        },
+        {
+          "title": "Energy Auditor",
+          "salary_range_inr": "4,00,000 - 10,00,000",
+          "experience_level": "Entry to Mid",
+          "skills_required": ["Energy audit methodology", "BEE standards", "Thermal imaging", "Data logging", "PAT scheme knowledge", "Report writing"],
+          "certifications": ["BEE Certified Energy Auditor (CEA)", "ISO 50001 Auditor"],
+          "demand": "High"
+        }
+      ]
+    },
+    {
+      "sector": "Wind Energy",
+      "growth_rate": "22% YoY",
+      "jobs_by_2030": "400,000+",
+      "top_roles": [
+        {
+          "title": "Wind Turbine Technician",
+          "salary_range_inr": "3,50,000 - 8,00,000",
+          "experience_level": "Entry to Mid",
+          "skills_required": ["Mechanical maintenance", "Electrical systems", "SCADA monitoring", "Height safety (GWO)", "Hydraulics", "Vibration analysis"],
+          "certifications": ["GWO Basic Safety Training", "HUET", "MNRE Wind Technician"],
+          "demand": "Very High"
+        },
+        {
+          "title": "Wind Resource Analyst",
+          "salary_range_inr": "6,00,000 - 14,00,000",
+          "experience_level": "Mid",
+          "skills_required": ["WindPRO software", "WAsP modelling", "Meteorological data analysis", "GIS mapping", "Python/R for data", "Micrositing"],
+          "certifications": ["RISO Wind Resource Assessment", "GIS Professional"],
+          "demand": "High"
+        }
+      ]
+    },
+    {
+      "sector": "Green Finance",
+      "growth_rate": "40% YoY",
+      "jobs_by_2030": "200,000+",
+      "top_roles": [
+        {
+          "title": "Green Finance Analyst",
+          "salary_range_inr": "8,00,000 - 20,00,000",
+          "experience_level": "Mid",
+          "skills_required": ["Green bond frameworks", "Climate risk assessment", "TCFD reporting", "Financial modelling", "Blended finance", "Impact measurement"],
+          "certifications": ["CFA ESG Certificate", "Climate Bonds Initiative Cert", "FRM"],
+          "demand": "Very High"
+        }
+      ]
+    }
+  ],
+  "free_learning_platforms": [
+    {
+      "platform": "NPTEL (IIT/IISc)",
+      "url": "https://nptel.ac.in",
+      "cost": "Free (₹1000 for certificate exam)",
+      "relevant_courses": ["Solar Energy", "Electric Vehicles", "Environmental Studies", "Energy Efficiency", "Sustainable Development"],
+      "duration": "4-12 weeks",
+      "certificate": true,
+      "credibility": "Very High"
+    },
+    {
+      "platform": "Coursera (Audit Mode)",
+      "url": "https://coursera.org",
+      "cost": "Free to audit (paid certificate)",
+      "relevant_courses": ["Renewable Energy", "ESG Investing", "Sustainable Finance", "Climate Change", "Green Supply Chain"],
+      "duration": "4-8 weeks",
+      "certificate": "Paid",
+      "credibility": "Very High"
+    },
+    {
+      "platform": "Skill India / PMKVY",
+      "url": "https://skillindia.gov.in",
+      "cost": "Completely Free",
+      "relevant_courses": ["Solar PV Technician", "EV Technician", "Energy Auditor", "Green Building"],
+      "duration": "2-6 months",
+      "certificate": true,
+      "credibility": "High"
+    },
+    {
+      "platform": "UNEP Finance Initiative",
+      "url": "https://www.unepfi.org/training",
+      "cost": "Free",
+      "relevant_courses": ["Sustainable Finance", "ESG Integration", "Climate Risk", "Impact Investing"],
+      "duration": "Self-paced",
+      "certificate": true,
+      "credibility": "Very High"
+    },
+    {
+      "platform": "edX (Audit Mode)",
+      "url": "https://edx.org",
+      "cost": "Free to audit",
+      "relevant_courses": ["Clean Energy", "Sustainable Cities", "Carbon Markets", "Climate Science"],
+      "duration": "4-16 weeks",
+      "certificate": "Paid",
+      "credibility": "Very High"
+    },
+    {
+      "platform": "YouTube (MNRE Official)",
+      "url": "https://youtube.com/@mnregoi",
+      "cost": "Free",
+      "relevant_courses": ["Solar Installation", "Wind Energy Basics", "Energy Policy India"],
+      "duration": "Self-paced",
+      "certificate": false,
+      "credibility": "High"
+    },
+    {
+      "platform": "GRI Academy",
+      "url": "https://www.grilearning.org",
+      "cost": "Some free modules",
+      "relevant_courses": ["GRI Reporting", "Sustainability Disclosure", "BRSR Basics"],
+      "duration": "2-8 hours per module",
+      "certificate": true,
+      "credibility": "Very High"
+    },
+    {
+      "platform": "iGOT Karmayogi (Govt of India)",
+      "url": "https://igotkarmayogi.gov.in",
+      "cost": "Completely Free",
+      "relevant_courses": ["Climate Change Policy", "Environment Management", "Sustainable Development"],
+      "duration": "Self-paced",
+      "certificate": true,
+      "credibility": "High"
+    }
+  ],
+  "india_green_policy_context": {
+    "national_solar_mission": "175 GW by 2022 target, 500 GW by 2030",
+    "ev_policy": "FAME II scheme, PLI for EV batteries",
+    "net_zero_target": "2070",
+    "ndc_target": "45% reduction in emission intensity by 2030",
+    "green_hydrogen_mission": "5 MMT by 2030",
+    "key_employers": ["Adani Green", "Tata Power Solar", "ReNew Power", "Greenko", "Ola Electric", "Ather Energy", "Mahindra Electric", "NTPC Renewable", "SECI", "IREDA"]
+  }
+}

@@ -1,0 +1,25 @@
+[project]
+name = "green-jobs-agent-v3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "ddgs>=9.14.4",
+    "fpdf2>=2.8.7",
+    "google-genai>=2.11.0",
+    "groq>=1.5.0",
+    "python-dotenv>=1.2.2",
+    "sqlite-utils>=4.0",
+    "streamlit>=1.59.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.2.0",
+    "pre-commit>=4.6.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.21",
+]
