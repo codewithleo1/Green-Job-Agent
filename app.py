@@ -379,20 +379,20 @@ def show_history_page() -> None:
 
         # Build header line
         user_col = f"&nbsp;·&nbsp; 👤 <b>{run['username']}</b>" if is_admin else ""
+        badge = status_badge(run['status'])
         st.markdown(f"""
         <div class="history-row">
-          <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="display:flex;justify-content:space-between;align-items:center">
             <div>
-              <b style="font-size:1rem;color:#1B5E20">#{run['id']} &nbsp; {run['user_name']}</b>
-              {user_col}
-              &nbsp; {status_badge(run['status'])}
+            <b style="font-size:1rem;color:#1B5E20">#{run['id']} &nbsp; {run['user_name']}</b>
+            {user_col} &nbsp; {badge}
             </div>
             <div style="font-size:0.8rem;color:#777">{started} &nbsp;·&nbsp; {elapsed}</div>
-          </div>
-          <div style="font-size:0.85rem;color:#444;margin-top:6px">
+        </div>
+        <div style="font-size:0.85rem;color:#444;margin-top:6px">
             🎯 <b>Goal:</b> {run['career_goal']}<br/>
             🏙️ {run['city']} &nbsp;·&nbsp; 🎓 {run['background'][:60]}{'…' if len(run['background']) > 60 else ''}
-          </div>
+        </div>
         </div>
         """, unsafe_allow_html=True)
 
