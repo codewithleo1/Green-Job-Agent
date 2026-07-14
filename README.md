@@ -2,6 +2,8 @@
 
 > An autonomous AI agent that helps professionals transition into green careers — built to industry standards.
 
+🌐 **Live Demo:** [green-jobs-career-advisor.streamlit.app](https://green-jobs-career-advisor.streamlit.app/)
+
 ## 📸 Screenshots
 
 ### Login Page
@@ -116,6 +118,8 @@ This project was upgraded from a demo notebook to production-grade code. Every d
 ---
 
 ## 🚀 Quick Start
+
+> **Try it live:** [green-jobs-career-advisor.streamlit.app](https://green-jobs-career-advisor.streamlit.app/) — no setup required.
 
 ### Prerequisites
 - Python 3.11+
